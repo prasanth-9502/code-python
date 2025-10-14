@@ -1,0 +1,32 @@
+import numpy as np
+
+arr = np.array([1, 3, 7, 2, 7, 9, 4, 3, 2, 1])
+specified_num = 3
+
+less_than = arr[arr < specified_num]
+greater_than = arr[arr > specified_num]
+
+print("Numbers less than", specified_num, ":", less_than)
+print("Numbers greater than", specified_num, ":", greater_than)
+
+max_value = np.max(arr)
+min_value = np.min(arr)
+max_index = np.argmax(arr)
+min_index = np.argmin(arr)
+
+print("Max value:", max_value)
+print("Min value:", min_value)
+print("Index of max value:", max_index)
+print("Index of min value:", min_index)
+
+# For a 2D array to show axis example
+arr_2d = np.array([[1, 5, 2],
+                   [7, 3, 9]])
+
+print("Max along axis 0:", np.argmax(arr_2d, axis=0))
+print("Min along axis 1:", np.argmin(arr_2d, axis=1))
+
+print("Representation of array:", repr(arr))
+print("Count of 7 in array:", np.count_nonzero(arr == 7))
+print("Bincount of array:", np.bincount(arr))
+print("Unique elements in array:", np.unique(arr))
