@@ -1,0 +1,22 @@
+import numpy as np
+
+help(np.add)
+
+arr = np.array([1, 2, 3, 4])
+print(np.all(arr != 0))
+
+a = np.array([1, 2, 3, 4])
+b = np.array([2, 2, 2, 5])
+
+print(np.greater(a, b))
+print(np.greater_equal(a, b))
+print(np.less(a, b))
+print(np.less_equal(a, b))
+print(np.equal(a, b))
+print(np.allclose(a, b, atol=1))
+
+print(np.zeros(5))
+print(np.ones(5))
+print(np.linspace(0, 1, 5))
+
+print(np.add(a, b).tolist())
