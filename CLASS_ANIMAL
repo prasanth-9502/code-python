@@ -1,0 +1,39 @@
+# Base class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return "Some generic animal sound"
+
+    def move(self):
+        return f"{self.name} moves around."
+
+# Derived class Dog
+class Dog(Animal):
+    def speak(self):
+        return f"{self.name} says: Woof!"
+
+    def fetch(self):
+        return f"{self.name} is fetching the ball."
+
+# Derived class Cat
+class Cat(Animal):
+    def speak(self):
+        return f"{self.name} says: Meow!"
+
+    def scratch(self):
+        return f"{self.name} is scratching the furniture."
+
+# Demonstrate usage
+if __name__ == "__main__":
+    dog = Dog("Buddy")
+    cat = Cat("Whiskers")
+
+    print(dog.speak())     # Buddy says: Woof!
+    print(dog.move())      # Buddy moves around.
+    print(dog.fetch())     # Buddy is fetching the ball.
+
+    print(cat.speak())     # Whiskers says: Meow!
+    print(cat.move())      # Whiskers moves around.
+    print(cat.scratch())   # Whiskers is scratching the furniture.
